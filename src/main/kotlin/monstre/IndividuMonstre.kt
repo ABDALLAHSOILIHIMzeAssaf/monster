@@ -111,6 +111,8 @@ class IndividuMonstre(
         pv += gainPv
     }
 
+
+
     /**
      * Attaque un autre [IndividuMonstre] et inflige des dégâts.
      *
