@@ -7,7 +7,7 @@ import kotlin.random.Random
 
 
 class MonsterKube(id:Int, nom: String, description: String, var chanceCapture:Double): Item(id, nom, description), Utilisable{
-    override fun utiliser(cible: IndividuMonstre, add: Any.(IndividuMonstre) -> Boolean): Boolean {
+    override fun utiliser(cible: IndividuMonstre): Boolean {
         println("Vous lancez le Monster Kube !")
 
         if (cible.entraineur != null) {
@@ -19,7 +19,7 @@ class MonsterKube(id:Int, nom: String, description: String, var chanceCapture:Do
 
         if (nbAleatoire < chanceCapture) {
             println("Le monstre est capturé !")
-
+            //cible.renommer()
             print("Veuillez saisir un nouveau nom : ")
             val nouveauNom = readln()
             if (nouveauNom.isNotBlank()) {
@@ -27,7 +27,7 @@ class MonsterKube(id:Int, nom: String, description: String, var chanceCapture:Do
             }
 
             if (joueur.equipeMonstre.size >= 6) {
-                joueur.boite.add(cible)
+                joueur.boiteMonstre.add(cible)
             } else {
                 joueur.equipeMonstre.add(cible)
             }

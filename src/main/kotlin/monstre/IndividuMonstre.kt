@@ -139,7 +139,7 @@ class IndividuMonstre(
      * Demande au joueur de renommer le monstre.
      * Si l'utilisateur entre un texte vide, le nom n'est pas modifié.
      */
-    fun renommer() {
+    fun rennomer() {
         println("Renommer $nom ?")
         val nouveauNom = readln()
         if (nouveauNom!="") {

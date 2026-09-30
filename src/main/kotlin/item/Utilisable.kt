@@ -21,5 +21,5 @@ interface Utilisable {
      *
     `false` sinon.
      */
-    fun utiliser(cible: IndividuMonstre, add: Any.(IndividuMonstre) -> Boolean): Boolean
+    fun utiliser(cible: IndividuMonstre): Boolean
 }

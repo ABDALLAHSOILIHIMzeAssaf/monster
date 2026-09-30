@@ -2,11 +2,13 @@ package org.ldv
 
 import dresseur.Entraineur
 import item.Badge
+import monstre.CombatMonstre
 
 import monstre.EspeceMonstre
 import monstre.IndividuMonstre
 import monstre.MonsterKube
 import org.example.monde.Zone
+
 
 /**
  * Change la couleur du message donné selon le nom de la couleur spécifié.
@@ -88,6 +90,28 @@ val especeFlamkip = EspeceMonstre(
     caractères = "Impulsif, joueur, loyal."
 )
 
+val especeSpringleaf = EspeceMonstre(
+    id = 5, // ID suivant logique après Flamkip
+    nom = "Springleaf",
+    type = "Plante",
+    baseAttaque = 9,
+    baseDefense = 14,
+    baseVitesse = 11,
+    baseAttaqueSpe = 12,
+    baseDefenseSpe = 15,
+    basePv = 60,
+    modAttaque = 6.5,
+    modDefense = 11.0,
+    modVitesse = 8.0,
+    modAttaqueSpe = 9.0,
+    modDefenseSpe = 12.0,
+    modPv = 15.0,
+    description = "Ce petit monstre ressemble à un bourgeon sur pattes. Il passe ses journées à chercher les rayons du soleil pour recharger ses forces et purifie l'air autour de lui lorsqu'il est heureux.",
+    particularites = "Ses feuilles s'épanouissent et brillent d'un vert intense lorsqu'il utilise ses capacités spéciales.",
+    caractères = "Calme, attentionné, résilient."
+)
+
+
 // --- Zones ---
 val route1 = Zone(id = 1, nom = "Route 1", expZone = 10, especesMonstres = mutableListOf(especeFlamkip, especeAquamy))
 val route2 = Zone(id = 2, nom = "Route 2", expZone = 20, especesMonstres = mutableListOf(especeAquamy))
@@ -125,6 +149,13 @@ fun main() {
     println("PV après tentative en négatif : ${monstre2.pv}")*/
 
     // Test : Badge()
-    var badgePierre = Badge(1, "Badge Roche", description = "Badge gagné lorsque le joeur atteint la arène de pierre")
+    val monstre1 = IndividuMonstre(1, "flamkip", 1500.0, especeFlamkip)
+    val monstre2 = IndividuMonstre(2, "aquamy", 1500.0, especeAquamy)
+    var combat = CombatMonstre(monstre1,monstre2)
+    combat.actionJoueur()
+    var badgePierre = Badge(1, "Badge Roche", description = "Badge gagné lorsque le joeur atteint la arène de pierre", joueur)
     println(badgePierre)
 }
+
+
+
