@@ -132,6 +132,7 @@ fun main() {
     val monstre1 = IndividuMonstre(1, "flamkip", 1500.0, especeFlamkip)
     val monstre2 = IndividuMonstre(2, "aquamy", 1500.0, especeAquamy)
 
+
     // Test : afficheDetail()
     monstre1.afficheDetail()
     monstre2.afficheDetail()

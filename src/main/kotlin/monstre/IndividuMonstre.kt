@@ -127,7 +127,6 @@ class IndividuMonstre(
         if (degatTotal < 1) {
             degatTotal = 1
         }
-
         val pvAvant = cible.pv
         cible.pv -= degatTotal
         val pvApres = cible.pv

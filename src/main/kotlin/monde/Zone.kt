@@ -1,5 +1,7 @@
 package org.example.monde
+import monstre.CombatMonstre
 import monstre.EspeceMonstre
+import monstre.IndividuMonstre
 import org.ldv.joueur
 
 import java.time.LocalDateTime
@@ -29,13 +31,17 @@ class Zone(
     var zoneSuivante: Zone? = null,
     var zonePrecedante: Zone? = null
 ) {
-    fun genereMonstre(){}
+    fun genereMonstre(): IndividuMonstre{
+        var uneEspece = especesMonstres.random()
+        var individuMonstre = IndividuMonstre(id=5,nom=uneEspece.nom,expZone.toDouble() +( (-20..20).random()/100 *expZone ), espece = uneEspece)
+        return individuMonstre
+    }
 
     fun rencontreMonstre(){
         var monstreSauvage = genereMonstre()
-        var premierPokemon = joueur.equipeMonstre
+        var premierPokemon = joueur.equipeMonstre[0]
 
-        var combatMonstre = combatMonstre(premierPokemon, monstreSauvage)
-        combat.lanceCombat()
+        var combatMonstre = CombatMonstre(premierPokemon, monstreSauvage)
+        combatMonstre.lanceCombat()
     }
 }
