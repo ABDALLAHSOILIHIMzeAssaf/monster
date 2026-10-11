@@ -2,7 +2,7 @@ package org.example.monde
 import monstre.CombatMonstre
 import monstre.EspeceMonstre
 import monstre.IndividuMonstre
-import org.ldv.joueur
+import org.example.joueur
 
 import java.time.LocalDateTime
 

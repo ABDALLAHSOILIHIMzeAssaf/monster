@@ -1,4 +1,4 @@
-package org.ldv
+package org.example
 
 import dresseur.Entraineur
 import item.Badge

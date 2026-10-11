@@ -1,7 +1,7 @@
 package monstre
 
 import item.Utilisable
-import org.ldv.joueur
+import org.example.joueur
 import kotlin.math.round
 
 

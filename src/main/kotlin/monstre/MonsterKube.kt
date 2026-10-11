@@ -2,7 +2,7 @@ package monstre
 
 import item.Item
 import item.Utilisable
-import org.ldv.joueur
+import org.example.joueur
 import kotlin.random.Random
 
 

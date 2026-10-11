@@ -1,12 +1,13 @@
 package jeu
 
+
 import dresseur.Entraineur
 import monstre.IndividuMonstre
 import org.example.monde.Zone
-import org.ldv.especeAquamy
-import org.ldv.especeFlamkip
-import org.ldv.especeSpringleaf
-import org.ldv.joueur
+import org.example.especeAquamy
+import org.example.especeFlamkip
+import org.example.especeSpringleaf
+import org.example.joueur
 
 class Partie(val id: Int, joueur: Entraineur, zone: Zone) {
     fun choixStarter() {
