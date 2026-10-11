@@ -131,10 +131,6 @@ Les prochaines étapes possibles incluent :
 
 ## 👨‍💻 Auteur
 
-**Mzé Assaf Abdallah Soilihi**
+**Mzé Abdallah Soilihi**
 
 - GitHub : [@ABDALLAHSOILIHIMzeAssaf](https://github.com/ABDALLAHSOILIHIMzeAssaf)
-
----
-
-*Projet personnel d'apprentissage et d'expérimentation autour de Kotlin et de la programmation orientée objet.*
