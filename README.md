@@ -1,6 +1,6 @@
 # Kotlin Monsters
 
-Petit jeu de monstres en console, écrit en Kotlin (projet de BTS SIO, Lycée Léonard de Vinci).
+Petit jeu de monstres en console, écrit en Kotlin.
 
 ## Lancer le jeu
 1. Ouvrir le projet dans IntelliJ IDEA (JDK 21 ou plus, Gradle).
