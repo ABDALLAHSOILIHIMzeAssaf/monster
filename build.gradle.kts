@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.4.10"
+    application
 }
 
 group = "org.example"
@@ -15,6 +16,20 @@ dependencies {
 
 kotlin {
     jvmToolchain(21)
+
+    sourceSets {
+        main {
+            kotlin.setSrcDirs(listOf("src/main/kotlin/org/example"))
+        }
+    }
+}
+
+application {
+    mainClass.set("org.example.MainKt")
+}
+
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
 }
 
 tasks.test {
